@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邪惡誘惑！咖哩豬排蛋包飯 - 美食專欄</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            dark: '#0F1115',
+                            accent: '#F59E0B',
+                            card: '#1A1D23',
+                            surface: 'rgba(255, 255, 255, 0.03)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F1115;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(26, 29, 35, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #F59E0B 0%, #C5A059 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .bento-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.3), transparent);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-brand-dark z-50">
+        <div id="progress" class="h-full bg-brand-accent w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <img src='https://opal.google/board/blobs/f70f2c4b-e66f-466e-b1de-63de8cef87d2' alt='media_1' class="w-full h-full object-cover scale-105 animate-float hero-mask" />
+        </div>
+        
+        <div class="relative z-20 container mx-auto px-6 text-center animate-fade-in-up">
+            <div class="mb-6 inline-block">
+                <span class="px-4 py-1 rounded-full border border-brand-gold/50 text-brand-gold text-sm font-display tracking-widest uppercase">Gastronomy Insight</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black font-display mb-6 tracking-tight leading-tight">
+                <span class="block">邪惡誘惑</span>
+                <span class="gradient-text">咖哩豬排蛋包飯</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+                一份盤子裡的「快樂全家桶」：關於飽足感與多巴胺的精確排列組合。
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium">
+                <span class="text-white/80">學號：M11408040</span>
+                <span class="hidden md:block text-white/30">|</span>
+                <span class="text-white/80 uppercase">Modern Gastronomy Series</span>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-20 max-w-5xl">
+        
+        <!-- Introduction Section -->
+        <section class="mb-32">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5">
+                    <h2 class="text-3xl font-bold font-display mb-6 italic border-l-4 border-brand-accent pl-6">🥗 前言：<br>這盤東西到底是何方神聖？</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        當我們走進一家日式洋食屋，菜單上總有一款料理讓人陷入天人交戰——明明知道攝取的熱量可能超標，卻又無法抗拒那金黃色的誘惑。這就是「咖哩豬排蛋包飯」，日式洋食界的夢幻連動。
+                    </p>
+                </div>
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Soul Components Bento -->
+                    <div class="glass p-6 rounded-2xl bento-card">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-brand-gold font-bold">01</span>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">咖哩醬</h4>
+                        <p class="text-xs text-gray-400">溫暖的甜味與濃郁質感，是整盤飯的靈魂基調。</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl bento-card">
+                        <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-brand-accent font-bold">02</span>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">炸豬排</h4>
+                        <p class="text-xs text-gray-400">金黃酥脆的外衣，齒尖碰撞時發出的「ㄎㄚˇ ㄗ」聲。</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl bento-card">
+                        <div class="w-10 h-10 bg-brand-gold/20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-brand-gold font-bold">03</span>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">蛋包</h4>
+                        <p class="text-xs text-gray-400">如熔岩般滑下的蛋液，為整道菜鋪上絲綢感。</p>
+                    </div>
+                    <div class="glass p-6 rounded-2xl bento-card">
+                        <div class="w-10 h-10 bg-brand-accent/20 rounded-lg flex items-center justify-center mb-4">
+                            <span class="text-brand-accent font-bold">04</span>
+                        </div>
+                        <h4 class="text-white font-bold mb-2">香Q米飯</h4>
+                        <p class="text-xs text-gray-400">承載醬汁與油脂，讓人飽足的最後一塊拼圖。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider mb-32"></div>
+
+        <!-- Chapter 1: History -->
+        <section class="mb-32">
+            <div class="max-w-3xl mx-auto">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="text-4xl font-serif text-brand-gold">I.</span>
+                    <h2 class="text-4xl font-bold font-display">時空旅行——這道菜是怎麼合體的？</h2>
+                </div>
+                <div class="prose prose-invert prose-lg max-w-none text-gray-300">
+                    <p class="mb-6 leading-loose">
+                        這道看似理所當然的高熱量大餐，其實是一部活生生的飲食近代化史。
+                    </p>
+                    <div class="relative pl-8 border-l border-brand-gold/30 my-10 space-y-10">
+                        <div class="relative">
+                            <span class="absolute -left-10 top-0 w-4 h-4 rounded-full bg-brand-gold border-4 border-brand-dark"></span>
+                            <h4 class="text-white font-bold mb-2">19 世紀：起源</h4>
+                            <p class="text-sm">咖哩隨英國海軍傳入日本，加入麵粉與果泥，改造為家常神菜。</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-10 top-0 w-4 h-4 rounded-full bg-brand-accent border-4 border-brand-dark"></span>
+                            <h4 class="text-white font-bold mb-2">煉瓦亭與北極星</h4>
+                            <p class="text-sm">炸肉餅轉化為「日式豬排」，蛋包飯則為體力勞動者設計的快速營養餐。</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-10 top-0 w-4 h-4 rounded-full bg-white border-4 border-brand-dark"></span>
+                            <h4 class="text-white font-bold mb-2">昭和時期：原地成團</h4>
+                            <p class="text-sm">隨著家庭餐廳盛行，三位天王終於在同一個盤子裡「原地成團」。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 2: Why we love it -->
+        <section class="mb-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="glass p-10 rounded-[2.5rem] flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-display tracking-widest text-brand-gold uppercase mb-4 block">Chapter II</span>
+                    <h3 class="text-3xl font-bold mb-6">為什麼全世界都為它瘋狂？</h3>
+                    <p class="text-gray-400 mb-6">掌握了「療癒系美食」之首的地位，它是觸發腦內啡的最快路徑。</p>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                        <p class="text-sm text-gray-300"><strong>療癒感：</strong> 高碳水、高蛋白的心理安全感。</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                        <p class="text-sm text-gray-300"><strong>流量密碼：</strong> 蛋液流下的視覺衝擊力。</p>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent"></div>
+                        <p class="text-sm text-gray-300"><strong>CP 值之王：</strong> 一次滿足所有願望的結構。</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative rounded-[2.5rem] overflow-hidden group">
+                <img src='https://opal.google/board/blobs/f70f2c4b-e66f-466e-b1de-63de8cef87d2' alt='media_1' class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-10">
+                    <p class="text-white/90 italic font-serif">"視覺上的滿足在動筷子之前就已經開始。"</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 3: Controversy -->
+        <section class="mb-32">
+            <div class="bg-brand-surface border border-white/5 rounded-3xl p-8 md:p-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold font-display mb-4">⚔️ 別為了這個吵架！熱門爭議話題</h2>
+                    <div class="h-1 w-20 bg-brand-gold mx-auto"></div>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <h4 class="text-brand-gold font-bold mb-4">靈魂之爭</h4>
+                        <p class="text-sm text-gray-400">淋醬派 vs 酥脆派。這不僅是口味問題，更是對物性（Texture）的哲學堅持。</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-brand-gold font-bold mb-4">卡路里真相</h4>
+                        <p class="text-sm text-gray-400">1300 大卡的驚人數據。對於健身者是報復社會，對於熱愛生活的人是靈魂補給品。</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="text-brand-gold font-bold mb-4">平衡的藝術</h4>
+                        <p class="text-sm text-gray-400">咖哩香料不能蓋過蛋皮清新。如果三者搶戲，那這場表演就崩了。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chapter 4: Future -->
+        <section class="mb-32">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1 order-2 md:order-1">
+                    <h2 class="text-4xl font-bold font-display mb-8">🚀 未來的豬排蛋包飯長什麼樣？</h2>
+                    <div class="space-y-6 text-gray-300">
+                        <div class="p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                            <h5 class="text-brand-accent font-bold mb-2">健康與奢華的共存</h5>
+                            <p class="text-sm">植物肉豬排、高纖低醣咖哩，試圖降低一千多大卡的罪惡指數。</p>
+                        </div>
+                        <div class="p-6 border border-white/10 rounded-xl hover:bg-white/5 transition-colors">
+                            <h5 class="text-brand-accent font-bold mb-2">精緻化轉型</h5>
+                            <p class="text-sm">低溫熟成、手工研磨香料，將庶民美食推向 Fine Dining 層次。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 order-1 md:order-2">
+                    <div class="aspect-square rounded-full border-2 border-dashed border-brand-gold/30 p-4 animate-[spin_20s_linear_infinite]">
+                        <div class="w-full h-full rounded-full overflow-hidden animate-[spin_20s_linear_infinite_reverse]">
+                            <img src='https://opal.google/board/blobs/f70f2c4b-e66f-466e-b1de-63de8cef87d2' alt='media_1' class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="text-center py-20 relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-brand-gold to-transparent"></div>
+            <h2 class="text-4xl md:text-5xl font-black font-display mb-8 pt-10">✨ 結語：今天晚上，就決定吃它了！</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xl text-gray-300 mb-10 leading-relaxed italic">
+                    「不管未來它如何變化，只要那口濃郁的咖哩伴隨著滑嫩蛋液與酥脆豬排在口中化開，那種瞬間湧現的『幸福感』就是不會改變的真理。」
+                </p>
+                <p class="text-gray-400 mb-12">
+                    今天辛苦了一整天嗎？那就別管什麼卡路里了，去享受那一盤「快樂全家桶」吧！
+                </p>
+                <button class="bg-brand-gold hover:bg-brand-accent text-brand-dark font-bold px-12 py-4 rounded-full transition-all duration-300 hover:tracking-[0.2em] transform hover:scale-105">
+                    FIND NEARBY RESTAURANTS
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Progress bar logic
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
+
