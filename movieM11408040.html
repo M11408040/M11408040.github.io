@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳴潮 (Wuthering Waves) 專題報告</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#C5A059',
+                            dark: '#0A0A0B',
+                            card: '#161618',
+                            accent: '#3E92CC',
+                            muted: '#8E8E93'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0B;
+            color: #E5E5E7;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(22, 22, 24, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% -20%, rgba(197, 160, 89, 0.15) 0%, rgba(10, 10, 11, 0) 70%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.5), transparent);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0A0A0B;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 10px;
+        }
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="custom-scrollbar font-sans">
+
+    <!-- Hero Section with Infographic at Top -->
+    <header class="relative pt-12 pb-20 px-4 hero-gradient overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <div class="inline-block px-4 py-1 mb-6 rounded-full border border-brand-gold/30 bg-brand-gold/10 text-brand-gold text-sm font-semibold tracking-widest uppercase animate-pulse">
+                Game Analysis Report
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tighter text-glow">
+                鳴潮 <span class="text-brand-gold">Wuthering Waves</span>
+            </h1>
+            <p class="text-brand-muted text-lg md:text-xl max-w-2xl mx-auto mb-12">
+                高強度動作基因與開放世界探索的極致融合：戰略價值與技術核心分析
+            </p>
+
+            <!-- Top Infographic -->
+            <div class="reveal active relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-brand-gold to-brand-accent rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                <div class="relative rounded-[2rem] overflow-hidden shadow-2xl border border-white/10">
+                    <img src="https://opal.google/board/blobs/de44b7c9-9014-4391-a860-3f5d9a29b587" alt="鳴潮 資訊圖表" class="w-full h-auto object-cover transform transition duration-700 hover:scale-[1.01]">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Layout: Video Centered -->
+    <main class="max-w-6xl mx-auto px-4 space-y-24 pb-32">
+        
+        <!-- Summary Bento Grid -->
+        <section class="reveal">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 md:col-span-2 flex flex-col justify-center">
+                    <h3 class="text-brand-gold font-bold text-2xl mb-4 flex items-center">
+                        <span class="w-8 h-[2px] bg-brand-gold mr-3"></span> 摘要 Summary
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm md:text-base">
+                        <div class="space-y-2">
+                            <p class="text-brand-accent font-semibold">產品定位</p>
+                            <p class="text-gray-300">庫洛遊戲開發的開放世界動作角色扮演遊戲 (ARPG)。</p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-brand-accent font-semibold">技術核心</p>
+                            <p class="text-gray-300">採用 UE4 打造，延續《戰雙帕彌什》的高強度動作基因。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card p-8 bg-brand-gold/5 flex flex-col justify-center border-brand-gold/20">
+                    <p class="text-brand-gold font-semibold mb-2">核心特色</p>
+                    <p class="text-2xl font-bold leading-tight">創新的「聲骸系統」結合怪物捕捉與戰鬥技能</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section (Centered) -->
+        <section class="reveal flex flex-col items-center">
+            <div class="max-w-4xl w-full">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4">視覺與戰鬥展示</h2>
+                    <p class="text-brand-muted">展示遊戲的開放世界探索、流暢動作戰鬥及核心聲骸系統</p>
+                </div>
+                
+                <!-- Video Container -->
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-brand-card ring-1 ring-white/10">
+                    <video src="https://opal.google/board/blobs/9e74ceec-fd78-4c37-be26-ac9ffd49e823" class="w-full aspect-video object-cover" controls autoplay muted loop></video>
+                    
+                    <!-- Floating Audio Controller Area -->
+                    <div class="absolute bottom-4 right-4 glass-card p-3 flex items-center space-x-3 scale-90 md:scale-100">
+                        <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center animate-spin-slow">
+                            <svg class="w-6 h-6 text-brand-dark" fill="currentColor" viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+                        </div>
+                        <div class="pr-2">
+                            <p class="text-[10px] uppercase tracking-widest text-brand-gold font-bold">Background Music</p>
+                            <audio src="https://opal.google/board/blobs/a49b619e-e04d-470f-bc81-b3e1194cf53b" controls class="h-8 w-32 md:w-48 opacity-80"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Dive Report Section (Bottom) -->
+        <section class="reveal space-y-16">
+            <div class="section-divider"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Sidebar / Student Info -->
+                <div class="lg:col-span-4 space-y-8">
+                    <div class="sticky top-12">
+                        <div class="glass-card p-8 border-l-4 border-l-brand-gold">
+                            <p class="text-brand-muted text-xs uppercase tracking-widest mb-2">Researcher</p>
+                            <h4 class="text-2xl font-bold mb-1">Famidoc Chang</h4>
+                            <p class="text-brand-gold font-mono">M11408040</p>
+                            <div class="mt-6 pt-6 border-t border-white/10">
+                                <p class="text-sm text-gray-400 italic">"探索二次元動作遊戲的未來邊界，分析開發技術與市場趨勢的共生關係。"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Article Content -->
+                <div class="lg:col-span-8 space-y-12 leading-relaxed text-gray-300">
+                    <!-- Section 1 -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-brand-gold text-4xl mr-4">01</span> 開發背景：從《戰雙帕彌什》到《鳴潮》
+                        </h2>
+                        <p>
+                            庫洛遊戲 (Kuro Games) 自研發《戰雙帕彌什》以來，便以優秀的動作打擊感與硬核的遊戲機制在市場立足。《鳴潮》作為其首款開放世界專案，旨在擴大玩家基數並挑戰更高規格的視覺表現。開發團隊試圖將前作積累的動作設計經驗移植到廣闊的地圖中，實現「高速戰鬥」與「自由探索」的有機結合。
+                        </p>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div class="glass-card p-8 bg-white/[0.02]">
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-brand-gold text-4xl mr-4">02</span> 核心技術：虛幻引擎與戰鬥系統
+                        </h2>
+                        <p class="mb-6">遊戲採用虛幻引擎 4 (UE4) 進行開發，藉此達成高品質的二次元渲染效果。其戰鬥系統是本作的核心競爭力：</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="text-brand-gold mr-3 font-bold">·</span>
+                                <div><strong class="text-white">極限閃避 (Perfect Dodge)：</strong> 精準時機閃避觸發強化反擊。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold mr-3 font-bold">·</span>
+                                <div><strong class="text-white">招架 (Parry)：</strong> 針對特定動作格擋，削減敵方「共振值」。</div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold mr-3 font-bold">·</span>
+                                <div><strong class="text-white">變奏與延奏技能：</strong> 角色切換引發的連鎖反應，強化戰場流暢度。</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-brand-gold text-4xl mr-4">03</span> 創新玩法：聲骸系統 (Echo System)
+                        </h2>
+                        <p class="mb-6">玩家擊敗野外怪物後，有機率吸收其餘韻形成「聲骸」，這是區別於同類產品的最大特色。</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-brand-gold/30 transition">
+                                <h5 class="font-bold text-brand-accent mb-2">戰技化與養成</h5>
+                                <p class="text-sm">提供屬性加成並能主動施放技能，具備隨機副屬性作為長期養成目標。</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-brand-gold/30 transition">
+                                <h5 class="font-bold text-brand-accent mb-2">地圖機動性</h5>
+                                <p class="text-sm">配合跑酷與勾爪系統，大幅提升了玩家在地圖移動時的自由度。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div>
+                        <h2 class="text-2xl font-bold text-white mb-6 flex items-baseline">
+                            <span class="text-brand-gold text-4xl mr-4">04</span> 市場表現與玩家評價
+                        </h2>
+                        <p class="mb-4">
+                            2024 年 5 月上市後於多國奪冠。專業媒體如 <span class="text-brand-accent">IGN</span> 與 <span class="text-brand-accent">4Gamers</span> 指出其戰鬥深度遠超同類產品。
+                        </p>
+                        <div class="p-6 rounded-2xl bg-red-500/5 border border-red-500/20">
+                            <p class="text-sm font-semibold text-red-400 mb-2">面臨挑戰</p>
+                            <p class="text-sm">上市初期性能優化尚有提升空間，且根據巴哈姆特 GNN 報導，初期劇情節奏較慢影響了新玩家代入感。</p>
+                        </div>
+                    </div>
+
+                    <!-- Conclusion -->
+                    <div class="p-8 rounded-3xl bg-brand-gold/10 border border-brand-gold/30 relative overflow-hidden group">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition duration-500">
+                            <svg class="w-24 h-24 text-brand-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M14 17h3v2h-3zm-2-2h3v2h-3zm2-4h3v2h-3zm2-4h3v2h-3zm-6-2h3v2h-3zm2 4h3v2h-3zm2 4h3v2h-3zm2 4h3v2h-3zM7 15h3v2H7zm2-2h3v2H9zm2-4h3v2h-3zm2-4h3v2h-3zm-6-2h3v2H5zm2 4h3v2H7zm2 4h3v2H9zm2 4h3v2h-3z"/></svg>
+                        </div>
+                        <h2 class="text-3xl font-black text-white mb-4 italic">Conclusion</h2>
+                        <p class="text-lg">
+                            《鳴潮》展現了庫洛遊戲深厚的造詣。核心戰鬥循環與獨特聲骸系統具備極高市場競爭力，隨後續優化，有潛力成為長線營運的頂級二次元 ARPG。
+                        </p>
+                    </div>
+
+                    <!-- References -->
+                    <div class="pt-8 border-t border-white/10">
+                        <h5 class="text-xs uppercase tracking-tighter text-brand-muted mb-4 font-bold">引用文獻來源 References</h5>
+                        <ul class="grid grid-cols-2 md:grid-cols-3 gap-y-2 text-[10px] md:text-xs text-brand-muted">
+                            <li>• 巴哈姆特 GNN</li>
+                            <li>• IGN Review</li>
+                            <li>• Sensor Tower</li>
+                            <li>• 4Gamers</li>
+                            <li>• GameLook</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Centered Footer -->
+    <footer class="py-12 border-t border-white/5 bg-brand-card flex flex-col items-center justify-center space-y-4">
+        <div class="text-center">
+            <p class="text-gray-400 text-sm tracking-wide">
+                【主題探索報告】by <span class="italic text-red-600 font-bold ml-1">Famidoc Chang</span>
+            </p>
+            <p class="text-gray-500 text-xs mt-2 font-mono">學號：M11408040</p>
+        </div>
+        <div class="flex space-x-4 opacity-30">
+            <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+
