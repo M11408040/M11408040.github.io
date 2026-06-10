@@ -812,3 +812,23 @@
 
 </body>
 </html>
+<div id="custom-supplement-info" style="margin: 40px auto; padding: 20px; max-width: 800px; background: #f9f9f9; border-left: 5px solid #007bff; border-radius: 4px; font-family: sans-serif; line-height: 1.8; color: #333; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    <h3 style="margin-top: 0; color: #007bff; font-size: 1.3rem; border-bottom: 1px solid #eee; padding-bottom: 10px;">📝 補充說明</h3>
+    <ol style="margin: 0; padding-left: 20px;">
+        <li style="margin-bottom: 10px;">此程式使用了手部/手勢偵測、次數記錄、背景移除只留下人像跟植入影片的功能。</li>
+        <li style="margin-bottom: 10px;">節奏是另外請 Antigravity 幫忙去寫一個新的程式，讓我跟著音樂按鍵盤鍵打我要的節奏後，他會轉換到我音樂節奏遊戲裡形成小圓點，那五個圓點是用鍵盤 1-5 數字鍵我自己決定音樂節拍什麼時候是要打哪一個的，因為當初 Antigravity 寫的節奏很爛，所以有特別修改。</li>
+        <li style="margin-bottom: 10px;">雙手同時比中指 = 暫停，暫停會出現 MV 畫面，自動播放 MV。</li>
+        <li style="margin-bottom: 10px;">雙手同時比 OK = 繼續遊戲，此時 MV 會停止，遊戲將在倒數 3 秒繼續。</li>
+        <li style="margin-bottom: 10px;">當再一次雙手同時比中指暫停遊戲，MV 的畫面是接續原先暫停時播放到的地方繼續播放，若播放完時會自動重播。</li>
+        <li style="margin-bottom: 10px;">語音嵌入是設置開始 2 語音隨機出現、打出 Perfect 每 50 個隨機 7 種語音、回復血量時隨機出現 2 種語音、miss 太多導致血量降到 80%/50%/0%時會有三種語音，最後遊戲結束會播放 1 種語音。（對我影片忘記我當初設幾個語音了講了一個大概的數字，因為作業太早做完了 xd）。</li>
+        <li style="margin-bottom: 10px;">影片當初設置無法播出聲音，所以此程式是分成無聲音影片 mp4 + mp3 音軌一起同時播放來達成影片的效果。</li>
+    </ol>
+</div>
+
+<script>
+// 檢查網址有沒有包含 unit=24，只有在 unit=24 的時候這段字才會顯示
+if (!window.location.search.includes('unit=24')) {
+    var infoDiv = document.getElementById('custom-supplement-info');
+    if (infoDiv) { infoDiv.style.display = 'none'; }
+}
+</script>
